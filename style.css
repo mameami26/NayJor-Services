@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+header {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  background-image: url("https://www.termalseramik.com.tr/wp-content/uploads/2022/01/FOSSIL-DARK-GREY-60X60-e1656664051395.jpg");
+  color: #ffffff;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+header h1 .seo {
+  color: #d9dcd6;
+}
+
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: cursive;
+  font-size: 20px;
+}
+ 
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+aside {
+  flex: 1;
+  padding: 80px;
+  text-align: left;
+  background-color: #DFDDD9;
+  background-size: 100%;
+  margin: 20px;
+}
+
+ h2 {
+  margin: 20px ;
+  text-transform: uppercase;
+  font-size: xx-large;
+  font-family: Cursive;
+  text-align: center;
+
+}
+footer {
+  text-align: center;
+  background-image: url(https://www.termalseramik.com.tr/wp-content/uploads/2022/01/FOSSIL-DARK-GREY-60X60-e1656664051395.jpg);
+  color: #fff;
+}
+
+footer a {
+  margin: 40px;
+}
+
+.element {
+  flex: 4;
+  background-color: #DFDDD9;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.Image {
+  border-width: 1px;
+  border-radius: 50px;
+  padding: 10px;
+  flex: 0 0 300px;
+  margin: 20px;
+ position: relative;
+}
+
+/* Added border-radius to match the image */
+.Image header {
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.Image p {
+  text-align: center;
+}
+
+.Image img {
+  width: 100%;
+border-radius: 50px;
+}
+
+.project {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--rounded);
+  padding: 10px;
+  flex: 0 0 500px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  margin: 20px;
+}
+
+.things {
+  flex: 1;
+  background-color: var(--light);
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+.project > header {
+  border-radius: var(rounded-top);
+  padding: 20px;
+  text-align: center;
+}
+
+.project > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
