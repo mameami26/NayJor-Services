@@ -7,21 +7,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="NayJor Logo" />
-      <span class="title">NayJor Services</span>
-    </div>
-    <ul class="nav-links"
-     <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#" onclick="openForm()">Contact</a></li>
-    </ul>
-  </nav>
+ <nav class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="NayJor Logo" />
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="#features" onclick="closeMenu()">Features</a></li>
+    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+    <li><a href="#team" onclick="closeMenu()">Team</a></li>
+    <li><a href="#testimonials" onclick="closeMenu()">Testimonials</a></li>
+    <li><a href="#" onclick="openForm(); closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+
 
   <!-- Hero -->
   <section class="hero" id="hero">
