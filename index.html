@@ -1,65 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="./reset.css">
-   <link rel="stylesheet" href="./style.css">
-   <title>Aminata potfolio</title>
- </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NayJor Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="NayJor Logo" />
+      <span class="title">NayJor Services</span>
+    </div>
+    <ul class="nav-links"
+     <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#" onclick="openForm()">Contact</a></li>
+    </ul>
+  </nav>
 
- <body>
-  <header>
-    <h1>Aminata Sall</h1>
-    <nav>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <img src="images/header.png" alt="header" />
+    <div class="hero-text">
+      <h1>Your Trusted Multi-Service Partner</h1>
+      <p>Fast, reliable, and dedicated support for all your needs.</p>
+      <button>Learn More</button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">✔ Immigration Applications</div>
+      <div class="service">✔ Tax Filing </div>
+      <div class="service">✔ Flight Booking</div>
+      <div class="service">✔ Party Organisation</div>
+      <div class="service">✔ Translation Services</div>
+      <div class="service">✔ Resume & Cover Letters</div>
+      <div class="service">✔ Document Preparation</div>
+      <div class="service">✔ Legal Assistance</div>
+      <div class="service">✔ Administrative Support</div>
+      <div class="service">✔ Tutorings</div>
+      <div class="service">✔ Notary Services</div>
+      <div class="service">✔ Event Planning</div>
+      <div class="service">✔ Social Media Management</div>
+      <div class="service">✔ Website Development</div>
+      <div class="service">✔ Graphic Design</div>
+      <div class="service">✔ Marketing Services</div>
+      <div class="service">✔ Customer Support</div>
+      <div class="service">✔ Travel Planning</div>
+      <div class="service">✔ Language Classes</div>
+      <div class="service">✔ IT Support</div>
+      <div class="service">✔ Virtual Assistant Services</div>
+      <div class="service">✔ Content Creation</div>
+      <div class="service">✔ Photography Services</div>
+      <div class="service">✔ Videography Services</div>
+      <div class="service">✔ Event Security</div>
+      <div class="service">✔ Legal Document Review</div>
+      <div class="service">✔ Business Registration</div>
+      <div class="service">✔ Market Research</div>
+      <div class="service">✔ E-commerce Solutions</div>
+      <div class="service">✔ App Development</div>
+      <div class="service">✔ Data Analysis</div>
+      <div class="service">✔ And More...</div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-list">
+      <div class="feature">
+        <img src="images/fast.jpeg" alt="Fast Service" />
+        <h3>Fast Service</h3>
+        <p>We prioritize your time and ensure quick turnaround.</p>
+      </div>
+      <div class="feature">
+        <img src="images/reliablity.jpeg" alt="Reliable Support" />
+        <h3>Reliable Support</h3>
+        <p>Our team is always here to assist you with any queries.</p>
+      </div>
+      <div class="feature">
+        <img src="images/team.png" alt="Dedicated Team" />
+        <h3>Dedicated Team</h3>
+        <p>We are committed to providing the best service possible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <h2>Our Work</h2>
+    <div class="portfolio-gallery">
+      <img src="images/portfolio1.png" alt="Portfolio Item 1" />
+      <img src="images/Picture.jpg" alt="Portfolio Item 2" />
+      <img src="images/Portfolio3.png" alt="Portfolio Item 3" />
+      <img src="images/Portfolio4.png" alt="Portfolio Item 4" />
+    </div>
+  </section>
+
+  <!-- Team -->
+ <section class="team" id="team">
+  <h2>Meet Our Team</h2>
+  <div class="team-members">
+    <div class="member">
+      <img src="images/Aminata.jpg" alt="Aminata Sall" />
+      <h3>Aminata Sall</h3>
+      <p>Founder & President – Leads NayJor Services with passion and purpose.</p>
+    </div>
+    <div class="member">
+      <img src="imageS/Maimouna.jpg" alt="Maimouna Sall" />
+      <h3>Maimouna Sall</h3>
+      <p>Assistant Manager – Supports operations and customer satisfaction.</p>
+    </div>
+    <div class="member">
+      <img src="images/Mariama.jpg" alt="Mariama Sall" />
+      <h3>Mariama Sall</h3>
+      <p>Client Relations – Keeps our clients informed and supported.</p>
+    </div>
+    <div class="member">
+      <img src="images/DJIANAB.jpg" alt="Djinab Sall" />
+      <h3>Djinab Sall</h3>
+      <p>Case Specialist – Handles detailed processing and follow-ups.</p>
+    </div>
+    <div class="member">
+      <img src="images/Fama.jpg" alt="Fama Sall" />
+      <h3>Fama Sall</h3>
+      <p>Administrative Assistant – Manages schedules and office support.</p>
+    </div>
+  </div>
+</section>
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-list" id="testimonialList">
+    <!-- Existing testimonials -->
+    <div class="testimonial">
+      <p>"NayJor Services has been a lifesaver for my business."</p>
+      <h4>- Sarah Lee</h4>
+    </div>
+    <div class="testimonial">
+      <p>"I highly recommend NayJor for their exceptional service."</p>
+      <h4>- David Kim</h4>
+    </div>
+  </div>
+
+  <div class="testimonial-form">
+    <h3>Leave a Review</h3>
+    <form id="testimonialForm">
+      <input type="text" id="reviewer" placeholder="Your Name" required />
+      <textarea id="reviewText" placeholder="Your Testimonial" required></textarea>
+      <label for="rating">Rating:</label>
+      <select id="rating" required>
+        <option value="">Choose</option>
+        <option value="⭐">⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+  <!-- Contact -->
+  <div class="popup-form" id="popupForm">
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <h3>Contact Us</h3>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send</button>
+      <button type="button" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>NdayJor Services</h3>
+      <p>Your trusted partner in immigration, legal, and administrative services.</p>
+      <p><strong>Address:</strong> 1443 Beach Ave, Bronx, NY 10460</p>
+      <p><strong>Phone:</strong> (929) 227-1511</p>
+      <p><strong>Email:</strong> mameami26@gmail.com</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
       <ul>
-        <li><a href="#About-me">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact-me">Contact me</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
       </ul>
-    </nav>
-  </header>
-
-   <main>
-     <aside>
-        <h2 id="About-me">About Me</h2>
-        <p id="resume">If you work hard you can achive any achivable things.
-          Although my friends commonly call me Amina, my name is Aminata Sall. I used to be really curious and wanted to know everything about the world around me.
-          My career path in the tech industry began with that curiosity. <br><br> You already know that I love technology and am trying to learn more about it.
-          I therefore hope to be considered the world's top full-stack developer in the upcoming years.
-          I work as a mentor at the DOE school under the LYFE program right now. It's my responsibility to support parent students in their academic endeavors.
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 NayJor Services. All rights reserved.</p>
+  </div>
+</footer>
 
 
-
-          </p>
-          <section class="Image">
-            <img src="./IMG_0296.jpg" 
-            alt="Image of me in a nice day." height="400" width="300">
-            <p>I believe action speack louder than world</p>
-          </section>
-     </aside>
-  <div class="element">
-    <section class="things">
-      <h2 id="work">Explore the incredible creations I have made thus far.</h2>
-       <div class="project">
-      <header>Project-1</header>
-         <a href="https://mameami26.github.io/prework-study-guide/"><img src="./Screenshot_25-4-2024_17363_mameami26.github.io.jpeg" alt="jroject-1" width="700"></a>
-        </div>
-        <div class="project">
-      <header>Project-2</header>
-      <a href="https://mameami26.github.io/Challange-1/"><img src="./Screenshot_25-4-2024_185216_mameami26.github.io.jpeg" alt="project-2" width="500"></a>
-        </div>
-   </div>
-   </main>
- </body>
-  <footer>
-    <h2 id="contact-me">😍It was a pleasure having you today contact me in the following information.😍</h2>
-    <a href="929-227-1511">
-      <img src="https://www.logolynx.com/images/logolynx/ab/ab12e62240fc114c3bfbf725ae0a8e0e.png" alt="phone number" height="100"></a>
-     <a href="https://github.com/mameami26/challange-2.git">
-      <img src="https://www.freeiconspng.com/uploads/github-mascot-logo-icon-13.png" alt="GitHub" height="100"></a>
-     <a href="https://www.linkedin.com/in/aminata-sall-00680a200/">
-      <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG7.png" alt="linked" height="100"></a>
-  </footer>
+  <script src="script.js"></script>
+</body>
 </html>
