@@ -1,3 +1,6 @@
+// =========================
+// POPUP FORM CONTROL
+// =========================
 function openForm() {
   document.getElementById("popupForm").style.display = "block";
 }
@@ -5,40 +8,97 @@ function openForm() {
 function closeForm() {
   document.getElementById("popupForm").style.display = "none";
 }
-function submitForm() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
 
-  if (name && email && message) {
-    alert("Form submitted successfully!");
-    closeForm();
-  } else {
-    alert("Please fill in all fields.");
+
+// =========================
+// CONTACT FORM (EMAIL)
+// =========================
+function submitForm(event) {
+  event.preventDefault();
+
+  const form = document.querySelector("#popupForm form");
+
+  const name = form.querySelector('input[name="name"]').value.trim();
+  const email = form.querySelector('input[name="email"]').value.trim();
+  const message = form.querySelector('textarea[name="message"]').value.trim();
+
+  if (!name || !email || !message) {
+    alert("Please fill in all required fields.");
+    return;
   }
+
+  const submitBtn = form.querySelector("button[type='submit']");
+  submitBtn.textContent = "Sending...";
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      "Accept": "application/json"
+    }
+  })
+  .then(response => {
+    submitBtn.textContent = "Send";
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+      closeForm();
+    } else {
+      alert("Error sending message. Try again.");
+    }
+  })
+  .catch(() => {
+    submitBtn.textContent = "Send";
+    alert("Network error. Try again.");
+  });
 }
-// Testimonial Form Logic
-document.getElementById("testimonialForm").addEventListener("submit", function (e) {
+
+
+// =========================
+// TESTIMONIALS (SAVE + LOAD)
+// =========================
+const testimonialForm = document.getElementById("testimonialForm");
+const testimonialList = document.getElementById("testimonialList");
+
+// Load saved reviews on page load
+window.addEventListener("load", () => {
+  const saved = JSON.parse(localStorage.getItem("reviews")) || [];
+  saved.forEach(addReviewToDOM);
+});
+
+// Submit new review
+testimonialForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const name = document.getElementById("reviewer").value.trim();
   const text = document.getElementById("reviewText").value.trim();
   const rating = document.getElementById("rating").value;
 
-  if (!name || !text || !rating) return;
+  if (!name || !text || !rating) {
+    alert("Please complete all review fields.");
+    return;
+  }
 
+  const review = { name, text, rating };
+
+  // Save to localStorage
+  const saved = JSON.parse(localStorage.getItem("reviews")) || [];
+  saved.push(review);
+  localStorage.setItem("reviews", JSON.stringify(saved));
+
+  addReviewToDOM(review);
+  testimonialForm.reset();
+});
+
+
+// Display review
+function addReviewToDOM(review) {
   const newTestimonial = document.createElement("div");
   newTestimonial.className = "testimonial";
-  newTestimonial.innerHTML = `<p>"${text}"</p><h4>- ${name} ${rating}</h4>`;
-
-  document.getElementById("testimonialList").appendChild(newTestimonial);
-
-  document.getElementById("testimonialForm").reset();
-});
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
-}
-
-function closeMenu() {
-  document.getElementById("navLinks").classList.remove("show");
+  newTestimonial.innerHTML = `
+    <p>"${review.text}"</p>
+    <h4>- ${review.name} ${review.rating}</h4>
+  `;
+  testimonialList.appendChild(newTestimonial);
 }
